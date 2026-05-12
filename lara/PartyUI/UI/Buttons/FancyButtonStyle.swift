@@ -20,26 +20,18 @@ public struct FancyButtonStyle: PrimitiveButtonStyle {
     }
     
     public func makeBody(configuration: Configuration) -> some View {
-        if #available(iOS 19.0, *) {
-            configuration.label
-                .buttonStyle(.plain)
-                .foregroundStyle(isEnabled ? color : .gray)
-                .frame(maxWidth: useFullWidth ? .infinity : nil)
-                .padding()
-                .glassEffect(.regular.interactive().tint(isEnabled ? color.opacity(0.2) : Color(.systemGray).opacity(0.2)), in: AnyShape(shape))
-                .onTapGesture(perform: configuration.trigger)
-        } else {
-            configuration.label
-                .buttonStyle(.plain)
-                .foregroundStyle(isEnabled ? color : .gray)
-                .frame(maxWidth: useFullWidth ? .infinity : nil)
-                .padding()
-                .background(isEnabled ? color.opacity(0.2) : Color(.systemGray).opacity(0.2), in: AnyShape(shape))
-                .background(.ultraThinMaterial, in: AnyShape(shape))
-                .brightness(0.1)
-                .onTapGesture(perform: configuration.trigger)
-                .modifier(FadeAnimation())
-        }
+        configuration.label
+            .buttonStyle(.plain)
+            .foregroundStyle(isEnabled ? MatrixColors.matrixGreen : .gray)
+            .frame(maxWidth: useFullWidth ? .infinity : nil)
+            .padding()
+            .background(isEnabled ? MatrixColors.matrixDarkGreen.opacity(0.6) : Color(.systemGray).opacity(0.2), in: AnyShape(shape))
+            .overlay(
+                AnyShape(shape)
+                    .stroke(isEnabled ? MatrixColors.matrixGreen : .gray.opacity(0.2), lineWidth: 2)
+            )
+            .onTapGesture(perform: configuration.trigger)
+            .modifier(FadeAnimation())
     }
     
 }

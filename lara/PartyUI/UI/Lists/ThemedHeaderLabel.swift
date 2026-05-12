@@ -20,10 +20,12 @@ public struct ThemedHeaderLabel: View {
         HStack {
             Image(systemName: icon)
                 .frame(width: 24, alignment: .center)
-            Text(text)
+            Text(text.uppercased())
+                .font(.system(.body, design: .monospaced))
         }
-        .fontWeight(.medium)
-        .opacity(0.6)
+        .foregroundStyle(MatrixColors.matrixGreen)
+        .fontWeight(.bold)
+        .opacity(0.8)
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.top)
     }

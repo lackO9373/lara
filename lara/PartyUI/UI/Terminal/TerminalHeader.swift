@@ -25,21 +25,24 @@ public struct TerminalHeader: View {
             HStack {
                 if icon != "showMeProgressPlease" {
                     Image(systemName: icon)
-                        .foregroundStyle(color)
+                        .foregroundStyle(color == Color(.label) ? MatrixColors.matrixGreen : color)
                         .frame(width: 22, height: 22, alignment: .center)
                 } else {
                     ProgressView()
                         .frame(width: 22, height: 22, alignment: .center)
                         .offset(y: 0.5)
+                        .tint(MatrixColors.matrixGreen)
                 }
                 Text(text)
-                    .fontWeight(.medium)
+                    .font(.system(.body, design: .monospaced))
+                    .fontWeight(.bold)
                     .lineLimit(1)
+                    .foregroundStyle(color == Color(.label) ? MatrixColors.matrixGreen : color)
             }
             if !context.isEmpty {
                 Text(context)
-                    .foregroundStyle(.secondary)
-                    .font(.subheadline)
+                    .foregroundStyle(MatrixColors.matrixGreen.opacity(0.7))
+                    .font(.system(.subheadline, design: .monospaced))
                     .lineLimit(2)
             }
         }

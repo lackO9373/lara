@@ -21,6 +21,10 @@ public struct TextFieldBackground: ViewModifier {
         content
             .frame(maxWidth: useFullWidth ? .infinity : nil)
             .padding()
-            .background(isEnabled ? Color(.quaternarySystemFill) : Color(.systemGray).opacity(0.2), in: AnyShape(shape))
+            .background(isEnabled ? MatrixColors.matrixBlack : Color(.systemGray).opacity(0.2), in: AnyShape(shape))
+            .overlay(
+                AnyShape(shape)
+                    .stroke(isEnabled ? MatrixColors.matrixGreen.opacity(0.5) : .gray.opacity(0.2), lineWidth: 1)
+            )
     }
 }

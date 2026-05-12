@@ -22,10 +22,14 @@ public struct TranslucentButtonStyle: PrimitiveButtonStyle {
     public func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .buttonStyle(.plain)
-            .foregroundStyle(isEnabled ? color : .gray)
+            .foregroundStyle(isEnabled ? MatrixColors.matrixGreen : .gray)
             .frame(maxWidth: useFullWidth ? .infinity : nil)
             .padding()
-            .background(isEnabled ? color.opacity(0.2) : Color(.systemGray).opacity(0.2), in: AnyShape(shape))
+            .background(isEnabled ? MatrixColors.matrixDarkGreen.opacity(0.4) : Color(.systemGray).opacity(0.2), in: AnyShape(shape))
+            .overlay(
+                AnyShape(shape)
+                    .stroke(isEnabled ? MatrixColors.matrixGreen.opacity(0.5) : .gray.opacity(0.2), lineWidth: 1)
+            )
             .onTapGesture(perform: configuration.trigger)
             .modifier(FadeAnimation())
     }

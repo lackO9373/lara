@@ -15,7 +15,11 @@ public struct SectionPlatter: ViewModifier {
         content
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
-            .background(Color(.secondarySystemBackground), in: .rect(cornerRadius: cornerRad.platter))
+            .background(MatrixColors.matrixDarkGreen.opacity(0.15), in: .rect(cornerRadius: cornerRad.platter))
+            .overlay(
+                RoundedRectangle(cornerRadius: cornerRad.platter)
+                    .stroke(MatrixColors.matrixGreen.opacity(0.3), lineWidth: 1)
+            )
     }
 }
 

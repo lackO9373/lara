@@ -477,26 +477,31 @@ private struct CVStatusCard: View {
             if icon == "showMeProgressPlease" {
                 ProgressView()
                     .frame(width: 22, height: 22)
+                    .tint(MatrixColors.matrixGreen)
             } else {
                 Image(systemName: icon)
                     .font(.system(size: 20, weight: .semibold))
-                    .foregroundStyle(color)
+                    .foregroundStyle(color == .secondary ? MatrixColors.matrixGreen.opacity(0.5) : color)
                     .frame(width: 22, height: 22)
             }
             if let p = progress {
                 Text("\(Int(p * 100))%")
                     .font(.system(size: 10, design: .monospaced))
-                    .foregroundStyle(.secondary)
+                    .foregroundStyle(MatrixColors.matrixGreen)
             } else {
-                Text(label)
-                    .font(.caption2)
-                    .fontWeight(.medium)
-                    .foregroundStyle(color == .secondary ? .secondary : color)
+                Text(label.uppercased())
+                    .font(.system(size: 8, design: .monospaced))
+                    .fontWeight(.bold)
+                    .foregroundStyle(color == .secondary ? MatrixColors.matrixGreen.opacity(0.5) : color)
             }
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 12)
-        .background(Color(.secondarySystemBackground), in: .rect(cornerRadius: cornerRad.sPlatter))
+        .background(MatrixColors.matrixBlack)
+        .overlay(
+            RoundedRectangle(cornerRadius: cornerRad.sPlatter)
+                .stroke(color == .secondary ? MatrixColors.matrixGreen.opacity(0.2) : color.opacity(0.5), lineWidth: 1)
+        )
     }
 }
 

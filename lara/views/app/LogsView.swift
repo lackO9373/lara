@@ -18,28 +18,38 @@ struct LogsView: View {
 
     var body: some View {
         NavigationStack {
-            List {
-                if UserDefaults.standard.bool(forKey: nobullshitkey) {
-                    let combined = logger.logs.joined(separator: "\n")
-                    Text(combined)
-                        .font(.system(size: 13, design: .monospaced))
-                        .lineSpacing(1)
-                        .onTapGesture {
-                            UIPasteboard.general.string = combined
-                            UIImpactFeedbackGenerator(style: .light).impactOccurred()
-                        }
-                } else {
-                    ForEach(Array(logger.logs.enumerated()), id: \.offset) { _, log in
-                        Text(log)
+            ScrollView {
+                VStack(alignment: .leading, spacing: 4) {
+                    if UserDefaults.standard.bool(forKey: nobullshitkey) {
+                        let combined = logger.logs.joined(separator: "\n")
+                        Text(combined)
                             .font(.system(size: 13, design: .monospaced))
+                            .foregroundStyle(MatrixColors.matrixGreen)
                             .lineSpacing(1)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .textSelection(.enabled)
                             .onTapGesture {
-                                UIPasteboard.general.string = log
+                                UIPasteboard.general.string = combined
                                 UIImpactFeedbackGenerator(style: .light).impactOccurred()
                             }
+                    } else {
+                        ForEach(Array(logger.logs.enumerated()), id: \.offset) { _, log in
+                            Text(log)
+                                .font(.system(size: 13, design: .monospaced))
+                                .foregroundStyle(MatrixColors.matrixGreen)
+                                .lineSpacing(1)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .textSelection(.enabled)
+                                .onTapGesture {
+                                    UIPasteboard.general.string = log
+                                    UIImpactFeedbackGenerator(style: .light).impactOccurred()
+                                }
+                        }
                     }
                 }
+                .padding()
             }
+            .background(MatrixColors.matrixBlack)
             .navigationTitle("Logs")
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {

@@ -47,12 +47,14 @@ struct lara: App {
         WindowGroup {
             TabView(selection: $selectedtab) {
                 ContentView()
+                    .matrixBackground()
                     .tabItem {
                         Label("Apply", systemImage: "wrench.and.screwdriver.fill")
                     }
                     .tag(taboptions.applying)
 
                 TweaksView(mgr: mgr)
+                    .matrixBackground()
                     .tabItem {
                         Label("Tweaks", systemImage: "slider.horizontal.3")
                     }
@@ -60,6 +62,7 @@ struct lara: App {
 
                 if showfmintabs {
                     SantanderView(startPath: "/")
+                        .matrixBackground()
                         .tabItem {
                             Label("Files", systemImage: "folder.fill")
                         }
@@ -68,6 +71,7 @@ struct lara: App {
 
                 if logsdisplaymode == .tabs {
                     LogsView(logger: globallogger)
+                        .matrixBackground()
                         .tabItem {
                             Label("Logs", systemImage: "terminal")
                         }
@@ -75,6 +79,7 @@ struct lara: App {
                 }
             }
             .environmentObject(mgr)
+            .tint(MatrixColors.matrixGreen)
             .overlay {
                 if mgr.showrespring {
                     respringview()
@@ -87,6 +92,7 @@ struct lara: App {
                 set: { mgr.showLogs = $0 }
             )) {
                 LogsView(logger: globallogger)
+                    .matrixBackground()
             }
             .sheet(isPresented: $iconthememgr.showFixupSheet) {
                 IconThemeFixupView()
