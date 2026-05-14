@@ -227,6 +227,7 @@ private struct santanderdirview: View {
     let writevfs: Bool
 
     @EnvironmentObject private var nav: santandernav
+    @ObservedObject private var mgr = laramgr.shared
     @ObservedObject private var clip = santanderclip.shared
     @AppStorage("fmRecursiveSearch") private var recsearch = false
 
@@ -252,6 +253,19 @@ private struct santanderdirview: View {
 
     var body: some View {
         List {
+            if mgr.fileopinprogress {
+                Section {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("VFS Operation in Progress...")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                        ProgressView(value: mgr.fileopprogress)
+                            .progressViewStyle(.linear)
+                    }
+                    .padding(.vertical, 4)
+                }
+            }
+
             if model.loading && model.shownitems.isEmpty {
                 Section {
                     HStack {

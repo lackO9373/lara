@@ -26,6 +26,7 @@ final class laramgr: ObservableObject {
     @Published var kaccessready: Bool = false
     @Published var kaccesserror: String?
     @Published var fileopinprogress: Bool = false
+    @Published var fileopprogress: Double = 0.0
     @Published var testresult: String?
     #if !DISABLE_REMOTECALL
     @Published var rcrunning: Bool = false
@@ -169,7 +170,11 @@ final class laramgr: ObservableObject {
         vfs_setlogcallback(laramgr.vfslogcallback)
         vfs_setprogresscallback { progress in
             DispatchQueue.main.async {
-                laramgr.shared.vfsprogress = progress
+                if laramgr.shared.fileopinprogress {
+                    laramgr.shared.fileopprogress = progress
+                } else {
+                    laramgr.shared.vfsprogress = progress
+                }
             }
         }
         vfsattempted = true
@@ -302,7 +307,10 @@ final class laramgr: ObservableObject {
             return false
         }
         
+        fileopinprogress = true
+        fileopprogress = 0.0
         let r = vfs_overwritefile(target, source)
+        fileopinprogress = false
         
         print("(vfs) vfs_overwritefile returned: \(r)")
         
@@ -401,14 +409,18 @@ final class laramgr: ObservableObject {
                 return false
             }
     
+            fileopinprogress = true
+            fileopprogress = 0.0
             for _ in 0..<5 {
                 let ok = path.withCString { vfs_zerofile($0) } == 0
     
                 if !ok {
+                    fileopinprogress = false
                     self.logmsg("(vfs) zerofile failed")
                     return false
                 }
             }
+            fileopinprogress = false
     
             self.logmsg("(vfs) zeroed \(path) 5 times")
             return true
