@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   build:
-    runs-on: macos-26
+    runs-on: macos-latest
 
     steps:
       - name: checkout
@@ -27,8 +27,8 @@ jobs:
       - name: show xcode version
         run: xcodebuild -version
 
-      - name: install ldid
-        run: brew install ldid
+      - name: install dependencies
+        run: brew install ldid xcpretty
 
       - name: build
         run: |
