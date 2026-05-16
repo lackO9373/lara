@@ -159,15 +159,16 @@ struct RemoteView: View {
                     Text("Enable UIKit Debug Overlay")
                 }
 
-                /*
                 Button {
-                    togglefreakydog()
+                    run("Double-Tap to Lock") {
+                        let result = double_tap_to_lock(mgr.sbProc)
+                        return "double_tap_to_lock() -> \(result)"
+                    }
                 } label: {
-                    Text(freakyrunning ? "Stop Freaky Dog Overlay" : "Start Freaky Dog Overlay")
+                    Text("Enable Double-Tap to Lock")
                 }
-                */
             } footer: {
-                Text("To use UIKit Debug Overlay, double tap the status bar.")
+                Text("To use UIKit Debug Overlay, double tap the status bar. Double tap the home screen to lock.")
             }
             
             Section {
