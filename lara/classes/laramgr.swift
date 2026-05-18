@@ -64,6 +64,18 @@ final class laramgr: ObservableObject {
     }
     private var axonliteTimer: Timer?
     
+    @Published var notepadEnabled: Bool = false {
+        didSet {
+            if let proc = sbProc {
+                if notepadEnabled {
+                    enable_notepad_overlay(proc)
+                } else {
+                    disable_notepad_overlay(proc)
+                }
+            }
+        }
+    }
+    
     var sbProc: RemoteCall?
     var ytProc = RemoteCall(process: "youtube", useMigFilterBypass: false)
     
@@ -71,7 +83,9 @@ final class laramgr: ObservableObject {
     static let fontpath = "/System/Library/Fonts/Core/SFUI.ttf"
     static let italicfontpath = "/System/Library/Fonts/Core/SFUIItalic.ttf"
     static let monofontpath = "/System/Library/Fonts/Core/SFUIMono.ttf"
-    init() {}
+    init() {
+        self.notepadEnabled = UserDefaults.standard.bool(forKey: "notepadEnabled")
+    }
 
     struct AppInfo {
         let executable: String
@@ -644,6 +658,9 @@ final class laramgr: ObservableObject {
                     self.rcLastError = nil
                     self.rcrunning = false
                     self.rcready = true
+                    if self.notepadEnabled {
+                        enable_notepad_overlay(self.sbProc!)
+                    }
                 } else {
                     self.logmsg("remote call init failed on \(process)")
                     let error = RemoteCall.lastInitError()

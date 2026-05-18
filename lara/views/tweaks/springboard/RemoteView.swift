@@ -25,7 +25,7 @@ struct RemoteView: View {
     @State private var hsColumns: Int = 4
     @State private var freakyrunning: Bool = false
     @State private var freakyseq: Int = 0
-    @State private var notepadEnabled: Bool = false
+    @AppStorage("notepadEnabled") private var notepadEnabledPersisted: Bool = false
 
     private var dockMaxColumns: Int { rcdockunlimited ? 50 : 10 }
 
@@ -180,13 +180,12 @@ struct RemoteView: View {
 
                 Toggle("Enable Axon Lite", isOn: $mgr.axonliteEnabled)
                 
-                Toggle("Enable Draggable Notepad", isOn: $notepadEnabled)
-                    .onChange(of: notepadEnabled) { enabled in
-                        if enabled {
-                            enable_notepad_overlay(mgr.sbProc)
-                        } else {
-                            disable_notepad_overlay(mgr.sbProc)
-                        }
+                Toggle("Enable Notepad Overlay", isOn: $mgr.notepadEnabled)
+                    .onChange(of: mgr.notepadEnabled) { enabled in
+                        notepadEnabledPersisted = enabled
+                    }
+                    .onAppear {
+                        mgr.notepadEnabled = notepadEnabledPersisted
                     }
             } footer: {
                 Text("To use UIKit Debug Overlay, double tap the status bar. Double tap the home screen or status bar to lock.")

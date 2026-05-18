@@ -47,6 +47,7 @@ struct SettingsView: View {
     @AppStorage("fmRecursiveSearch") private var fmRecursiveSearch: Bool = false
     
     @AppStorage("rcDockUnlimited") private var rcDockUnlimited: Bool = false
+    @AppStorage("notepadEnabled") private var notepadEnabled: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -189,6 +190,10 @@ struct SettingsView: View {
                 Section(header: HeaderLabel(text: "RemoteCall", icon: "syringe")) {
                     Toggle("Stash KRW primitives", isOn: $stashKRW)
                     Toggle("Allow >10 dock icons", isOn: $rcDockUnlimited)
+                    Toggle("Enable Notepad Overlay", isOn: $notepadEnabled)
+                        .onChange(of: notepadEnabled) { enabled in
+                            mgr.notepadEnabled = enabled
+                        }
                 }
                 #endif
             }
