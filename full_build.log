@@ -1,0 +1,398 @@
+build	Set up job	﻿2026-05-16T15:08:45.1242440Z Current runner version: '2.334.0'
+build	Set up job	2026-05-16T15:08:45.1256480Z ##[group]Runner Image Provisioner
+build	Set up job	2026-05-16T15:08:45.1256930Z Hosted Compute Agent
+build	Set up job	2026-05-16T15:08:45.1257250Z Version: 20260422.526
+build	Set up job	2026-05-16T15:08:45.1257600Z Commit: e1a9e573f4d0838b3a7c1b07401aeb29ed3635a9
+build	Set up job	2026-05-16T15:08:45.1258000Z Build Date: 2026-04-22T09:31:31Z
+build	Set up job	2026-05-16T15:08:45.1258380Z Worker ID: {aa6d3801-59bc-460e-ab6b-c9e14b6d5004}
+build	Set up job	2026-05-16T15:08:45.1258810Z Azure Region: westus
+build	Set up job	2026-05-16T15:08:45.1259130Z ##[endgroup]
+build	Set up job	2026-05-16T15:08:45.1259900Z ##[group]Operating System
+build	Set up job	2026-05-16T15:08:45.1260240Z macOS
+build	Set up job	2026-05-16T15:08:45.1260520Z 26.3
+build	Set up job	2026-05-16T15:08:45.1260770Z 25D125
+build	Set up job	2026-05-16T15:08:45.1261050Z ##[endgroup]
+build	Set up job	2026-05-16T15:08:45.1261330Z ##[group]Runner Image
+build	Set up job	2026-05-16T15:08:45.1261650Z Image: macos-26-arm64
+build	Set up job	2026-05-16T15:08:45.1261960Z Version: 20260427.0026.1
+build	Set up job	2026-05-16T15:08:45.1262610Z Included Software: https://github.com/actions/runner-images/blob/macos-26-arm64/20260427.0026/images/macos/macos-26-arm64-Readme.md
+build	Set up job	2026-05-16T15:08:45.1263600Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-26-arm64%2F20260427.0026
+build	Set up job	2026-05-16T15:08:45.1264190Z ##[endgroup]
+build	Set up job	2026-05-16T15:08:45.1264770Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-05-16T15:08:45.1265630Z Contents: write
+build	Set up job	2026-05-16T15:08:45.1265920Z Metadata: read
+build	Set up job	2026-05-16T15:08:45.1266210Z ##[endgroup]
+build	Set up job	2026-05-16T15:08:45.1267580Z Secret source: Actions
+build	Set up job	2026-05-16T15:08:45.1267960Z Prepare workflow directory
+build	Set up job	2026-05-16T15:08:45.1465720Z Prepare all required actions
+build	Set up job	2026-05-16T15:08:45.1492540Z Getting action download info
+build	Set up job	2026-05-16T15:08:45.6589920Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build	Set up job	2026-05-16T15:08:46.0171420Z Download action repository 'maxim-lobanov/setup-xcode@v1' (SHA:ed7a3b1fda3918c0306d1b724322adc0b8cc0a90)
+build	Set up job	2026-05-16T15:08:46.4047030Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	Set up job	2026-05-16T15:08:46.5999900Z Complete job name: build
+build	checkout	﻿2026-05-16T15:08:46.6379490Z ##[group]Run actions/checkout@v4
+build	checkout	2026-05-16T15:08:46.6379960Z with:
+build	checkout	2026-05-16T15:08:46.6380210Z   fetch-depth: 0
+build	checkout	2026-05-16T15:08:46.6380480Z   repository: lackO9373/lara
+build	checkout	2026-05-16T15:08:46.6380870Z   token: ***
+build	checkout	2026-05-16T15:08:46.6381120Z   ssh-strict: true
+build	checkout	2026-05-16T15:08:46.6381370Z   ssh-user: git
+build	checkout	2026-05-16T15:08:46.6381640Z   persist-credentials: true
+build	checkout	2026-05-16T15:08:46.6381930Z   clean: true
+build	checkout	2026-05-16T15:08:46.6382190Z   sparse-checkout-cone-mode: true
+build	checkout	2026-05-16T15:08:46.6382510Z   fetch-tags: false
+build	checkout	2026-05-16T15:08:46.6382770Z   show-progress: true
+build	checkout	2026-05-16T15:08:46.6383030Z   lfs: false
+build	checkout	2026-05-16T15:08:46.6383270Z   submodules: false
+build	checkout	2026-05-16T15:08:46.6383540Z   set-safe-directory: true
+build	checkout	2026-05-16T15:08:46.6383920Z ##[endgroup]
+build	checkout	2026-05-16T15:08:46.9844980Z Syncing repository: lackO9373/lara
+build	checkout	2026-05-16T15:08:46.9846230Z ##[group]Getting Git version info
+build	checkout	2026-05-16T15:08:46.9847200Z Working directory is '/Users/runner/work/lara/lara'
+build	checkout	2026-05-16T15:08:46.9847940Z [command]/opt/homebrew/bin/git version
+build	checkout	2026-05-16T15:08:47.0643070Z git version 2.54.0
+build	checkout	2026-05-16T15:08:47.0731450Z ##[endgroup]
+build	checkout	2026-05-16T15:08:47.0736440Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/d85589e0-3165-48c7-a169-d451e3decd75/.gitconfig'
+build	checkout	2026-05-16T15:08:47.0737540Z Temporarily overriding HOME='/Users/runner/work/_temp/d85589e0-3165-48c7-a169-d451e3decd75' before making global git config changes
+build	checkout	2026-05-16T15:08:47.0738530Z Adding repository directory to the temporary git global config as a safe directory
+build	checkout	2026-05-16T15:08:47.0739420Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/lara/lara
+build	checkout	2026-05-16T15:08:47.0945660Z Deleting the contents of '/Users/runner/work/lara/lara'
+build	checkout	2026-05-16T15:08:47.0996270Z ##[group]Initializing the repository
+build	checkout	2026-05-16T15:08:47.0998090Z [command]/opt/homebrew/bin/git init /Users/runner/work/lara/lara
+build	checkout	2026-05-16T15:08:47.1121170Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	checkout	2026-05-16T15:08:47.1123700Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	checkout	2026-05-16T15:08:47.1124960Z hint: to use in all of your new repositories, which will suppress this warning,
+build	checkout	2026-05-16T15:08:47.1125640Z hint: call:
+build	checkout	2026-05-16T15:08:47.1126030Z hint:
+build	checkout	2026-05-16T15:08:47.1126500Z hint: 	git config --global init.defaultBranch <name>
+build	checkout	2026-05-16T15:08:47.1127040Z hint:
+build	checkout	2026-05-16T15:08:47.1127540Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	checkout	2026-05-16T15:08:47.1128290Z hint: 'development'. The just-created branch can be renamed via this command:
+build	checkout	2026-05-16T15:08:47.1128870Z hint:
+build	checkout	2026-05-16T15:08:47.1129270Z hint: 	git branch -m <name>
+build	checkout	2026-05-16T15:08:47.1129930Z hint:
+build	checkout	2026-05-16T15:08:47.1130640Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	checkout	2026-05-16T15:08:47.1131520Z Initialized empty Git repository in /Users/runner/work/lara/lara/.git/
+build	checkout	2026-05-16T15:08:47.1132940Z [command]/opt/homebrew/bin/git remote add origin https://github.com/lackO9373/lara
+build	checkout	2026-05-16T15:08:47.1203960Z ##[endgroup]
+build	checkout	2026-05-16T15:08:47.1204560Z ##[group]Disabling automatic garbage collection
+build	checkout	2026-05-16T15:08:47.1206600Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+build	checkout	2026-05-16T15:08:47.1260270Z ##[endgroup]
+build	checkout	2026-05-16T15:08:47.1260830Z ##[group]Setting up auth
+build	checkout	2026-05-16T15:08:47.1264980Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	checkout	2026-05-16T15:08:47.1323280Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	checkout	2026-05-16T15:08:47.2775030Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	checkout	2026-05-16T15:08:47.2777370Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	checkout	2026-05-16T15:08:47.3904980Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	checkout	2026-05-16T15:08:47.4631280Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	checkout	2026-05-16T15:08:47.5153900Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	checkout	2026-05-16T15:08:47.5217000Z ##[endgroup]
+build	checkout	2026-05-16T15:08:47.5217800Z ##[group]Fetching the repository
+build	checkout	2026-05-16T15:08:47.5222480Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+build	checkout	2026-05-16T15:08:51.7200210Z From https://github.com/lackO9373/lara
+build	checkout	2026-05-16T15:08:51.7201140Z  * [new branch]      main       -> origin/main
+build	checkout	2026-05-16T15:08:51.7201780Z  * [new tag]         nightly    -> nightly
+build	checkout	2026-05-16T15:08:51.7296410Z [command]/opt/homebrew/bin/git branch --list --remote origin/main
+build	checkout	2026-05-16T15:08:51.7381080Z   origin/main
+build	checkout	2026-05-16T15:08:51.7385390Z [command]/opt/homebrew/bin/git rev-parse refs/remotes/origin/main
+build	checkout	2026-05-16T15:08:51.7450100Z 1c5df1b2189cc06f5e6e05d198980bdc693dfd94
+build	checkout	2026-05-16T15:08:51.7452490Z ##[endgroup]
+build	checkout	2026-05-16T15:08:51.7453060Z ##[group]Determining the checkout info
+build	checkout	2026-05-16T15:08:51.7453660Z ##[endgroup]
+build	checkout	2026-05-16T15:08:51.7456870Z [command]/opt/homebrew/bin/git sparse-checkout disable
+build	checkout	2026-05-16T15:08:51.7543480Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+build	checkout	2026-05-16T15:08:51.7617460Z ##[group]Checking out the ref
+build	checkout	2026-05-16T15:08:51.7621320Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	checkout	2026-05-16T15:08:51.8378470Z Switched to a new branch 'main'
+build	checkout	2026-05-16T15:08:51.8480660Z branch 'main' set up to track 'origin/main'.
+build	checkout	2026-05-16T15:08:51.8715500Z ##[endgroup]
+build	checkout	2026-05-16T15:08:51.8770720Z [command]/opt/homebrew/bin/git log -1 --format=%H
+build	checkout	2026-05-16T15:08:51.8785460Z 1c5df1b2189cc06f5e6e05d198980bdc693dfd94
+build	setup xcode	﻿2026-05-16T15:08:51.8887780Z ##[group]Run maxim-lobanov/setup-xcode@v1
+build	setup xcode	2026-05-16T15:08:51.8888290Z with:
+build	setup xcode	2026-05-16T15:08:51.8888590Z   xcode-version: latest-stable
+build	setup xcode	2026-05-16T15:08:51.8888940Z ##[endgroup]
+build	setup xcode	2026-05-16T15:08:52.1832690Z Switching Xcode to version 'latest-stable'...
+build	setup xcode	2026-05-16T15:08:52.2536330Z Xcode is set to 26.4.1 (17E202)
+build	show xcode version	﻿2026-05-16T15:08:52.2726680Z ##[group]Run xcodebuild -version
+build	show xcode version	2026-05-16T15:08:52.2727880Z [36;1mxcodebuild -version[0m
+build	show xcode version	2026-05-16T15:08:52.2777250Z shell: /bin/bash -e {0}
+build	show xcode version	2026-05-16T15:08:52.2778190Z env:
+build	show xcode version	2026-05-16T15:08:52.2779080Z   MD_APPLE_SDK_ROOT: /Applications/Xcode_26.4.1.app
+build	show xcode version	2026-05-16T15:08:52.2780290Z ##[endgroup]
+build	show xcode version	2026-05-16T15:08:54.4676970Z Xcode 26.4.1
+build	show xcode version	2026-05-16T15:08:54.4677500Z Build version 17E202
+build	install ldid	﻿2026-05-16T15:08:54.4724270Z ##[group]Run brew install ldid
+build	install ldid	2026-05-16T15:08:54.4724500Z [36;1mbrew install ldid[0m
+build	install ldid	2026-05-16T15:08:54.4752500Z shell: /bin/bash -e {0}
+build	install ldid	2026-05-16T15:08:54.4752640Z env:
+build	install ldid	2026-05-16T15:08:54.4752800Z   MD_APPLE_SDK_ROOT: /Applications/Xcode_26.4.1.app
+build	install ldid	2026-05-16T15:08:54.4753010Z ##[endgroup]
+build	install ldid	2026-05-16T15:08:56.2527470Z ✔︎ JSON API formula_tap_migrations.jws.json
+build	install ldid	2026-05-16T15:08:56.2527920Z ✔︎ JSON API cask_tap_migrations.jws.json
+build	install ldid	2026-05-16T15:08:57.7232050Z [32m==>[0m [1mFetching downloads for: [32mldid[39m[0m
+build	install ldid	2026-05-16T15:08:58.1473060Z ✔︎ Bottle Manifest ldid (2.1.5_1)
+build	install ldid	2026-05-16T15:08:58.6847650Z ✔︎ Bottle Manifest libplist (2.7.0)
+build	install ldid	2026-05-16T15:08:58.8324210Z ✔︎ Bottle libplist (2.7.0)
+build	install ldid	2026-05-16T15:08:58.9388690Z ✔︎ Bottle ldid (2.1.5_1)
+build	install ldid	2026-05-16T15:08:58.9389660Z [32m==>[0m [1mInstalling ldid dependency: [32mlibplist[39m[0m
+build	install ldid	2026-05-16T15:08:58.9751070Z [34m==>[0m [1mPouring libplist--2.7.0.arm64_tahoe.bottle.tar.gz[0m
+build	install ldid	2026-05-16T15:09:00.7180380Z 🍺  /opt/homebrew/Cellar/libplist/2.7.0: 32 files, 659.7KB
+build	install ldid	2026-05-16T15:09:00.7187870Z [34m==>[0m [1mPouring ldid--2.1.5_1.arm64_tahoe.bottle.1.tar.gz[0m
+build	install ldid	2026-05-16T15:09:01.7921420Z 🍺  /opt/homebrew/Cellar/ldid/2.1.5_1: 6 files, 292.2KB
+build	build	﻿2026-05-16T15:09:01.8320890Z ##[group]Run chmod +x scripts/build_ipa.sh
+build	build	2026-05-16T15:09:01.8321250Z [36;1mchmod +x scripts/build_ipa.sh[0m
+build	build	2026-05-16T15:09:01.8321490Z [36;1m./scripts/build_ipa.sh[0m
+build	build	2026-05-16T15:09:01.8354270Z shell: /bin/bash -e {0}
+build	build	2026-05-16T15:09:01.8354460Z env:
+build	build	2026-05-16T15:09:01.8354670Z   MD_APPLE_SDK_ROOT: /Applications/Xcode_26.4.1.app
+build	build	2026-05-16T15:09:01.8354970Z ##[endgroup]
+build	build	2026-05-16T15:09:01.8761960Z Build Started!
+build	build	2026-05-16T15:09:01.8762330Z 
+build	build	2026-05-16T15:09:31.0537860Z 
+build	build	2026-05-16T15:09:31.0546270Z ⚠️  /Users/runner/work/lara/lara/lara/classes/IconThemeGalleryManager.swift:109:81: main actor-isolated static property 'shared' can not be referenced from a nonisolated context
+build	build	2026-05-16T15:09:31.0573750Z 
+build	build	2026-05-16T15:09:31.0574920Z     func downloadAndImport(_ theme: GalleryTheme, importer: IconThemeManager = .shared) async throws {
+build	build	2026-05-16T15:09:31.0575820Z                                                                                 ^
+build	build	2026-05-16T15:09:31.0576340Z 
+build	build	2026-05-16T15:09:31.0577500Z 
+build	build	2026-05-16T15:09:31.0651780Z 
+build	build	2026-05-16T15:09:31.0770930Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.0771680Z 
+build	build	2026-05-16T15:09:31.0771910Z     var shape: Shape
+build	build	2026-05-16T15:09:31.0847120Z                ^
+build	build	2026-05-16T15:09:31.0955160Z 
+build	build	2026-05-16T15:09:31.0996290Z 
+build	build	2026-05-16T15:09:31.1017190Z 
+build	build	2026-05-16T15:09:31.1018310Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1019190Z 
+build	build	2026-05-16T15:09:31.1020030Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1029100Z                ^~~~~
+build	build	2026-05-16T15:09:31.1029270Z 
+build	build	2026-05-16T15:09:31.1029270Z 
+build	build	2026-05-16T15:09:31.1029270Z 
+build	build	2026-05-16T15:09:31.1030030Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1030710Z 
+build	build	2026-05-16T15:09:31.1030830Z     var shape: Shape
+build	build	2026-05-16T15:09:31.1031090Z                                                                                            ^~~~~
+build	build	2026-05-16T15:09:31.1031330Z 
+build	build	2026-05-16T15:09:31.1031350Z 
+build	build	2026-05-16T15:09:31.1031350Z 
+build	build	2026-05-16T15:09:31.1032060Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1032680Z 
+build	build	2026-05-16T15:09:31.1033160Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1033780Z                ^~~~~
+build	build	2026-05-16T15:09:31.1033920Z 
+build	build	2026-05-16T15:09:31.1033930Z 
+build	build	2026-05-16T15:09:31.1033930Z 
+build	build	2026-05-16T15:09:31.1034510Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1035130Z 
+build	build	2026-05-16T15:09:31.1035240Z     var shape: Shape
+build	build	2026-05-16T15:09:31.1035480Z                                                                                            ^~~~~
+build	build	2026-05-16T15:09:31.1035720Z 
+build	build	2026-05-16T15:09:31.1035730Z 
+build	build	2026-05-16T15:09:31.1035730Z 
+build	build	2026-05-16T15:09:31.1036300Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1037090Z 
+build	build	2026-05-16T15:09:31.1037530Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1038750Z                ^~~~~
+build	build	2026-05-16T15:09:31.1038920Z 
+build	build	2026-05-16T15:09:31.1038930Z 
+build	build	2026-05-16T15:09:31.1038930Z 
+build	build	2026-05-16T15:09:31.1040070Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:11:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1045870Z 
+build	build	2026-05-16T15:09:31.1045990Z     var shape: Shape
+build	build	2026-05-16T15:09:31.1046240Z                                                                                            ^~~~~
+build	build	2026-05-16T15:09:31.1046500Z 
+build	build	2026-05-16T15:09:31.1046500Z 
+build	build	2026-05-16T15:09:31.1046500Z 
+build	build	2026-05-16T15:09:31.1047080Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:15:63: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1047760Z 
+build	build	2026-05-16T15:09:31.1048140Z     public init(foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1048640Z                ^~~~~
+build	build	2026-05-16T15:09:31.1048830Z 
+build	build	2026-05-16T15:09:31.1048840Z 
+build	build	2026-05-16T15:09:31.1048840Z 
+build	build	2026-05-16T15:09:31.1049750Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:75: cannot use default expression for inference of 'T.Type' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1050810Z 
+build	build	2026-05-16T15:09:31.1051250Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	build	2026-05-16T15:09:31.1051780Z                                                               ^~~~~
+build	build	2026-05-16T15:09:31.1052300Z 
+build	build	2026-05-16T15:09:31.1052310Z 
+build	build	2026-05-16T15:09:31.1052320Z 
+build	build	2026-05-16T15:09:31.1053040Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:100: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1053780Z 
+build	build	2026-05-16T15:09:31.1054170Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	build	2026-05-16T15:09:31.1054720Z                                                                           ^
+build	build	2026-05-16T15:09:31.1054960Z 
+build	build	2026-05-16T15:09:31.1054960Z 
+build	build	2026-05-16T15:09:31.1054960Z 
+build	build	2026-05-16T15:09:31.1055620Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:120: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1056340Z 
+build	build	2026-05-16T15:09:31.1056730Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	build	2026-05-16T15:09:31.1057280Z                                                                                                    ^
+build	build	2026-05-16T15:09:31.1057530Z 
+build	build	2026-05-16T15:09:31.1057530Z 
+build	build	2026-05-16T15:09:31.1057530Z 
+build	build	2026-05-16T15:09:31.1058420Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:78: cannot use default expression for inference of 'T.Type' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1059200Z 
+build	build	2026-05-16T15:09:31.1059520Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	build	2026-05-16T15:09:31.1060210Z                                                                                                                        ^
+build	build	2026-05-16T15:09:31.1060640Z 
+build	build	2026-05-16T15:09:31.1060640Z 
+build	build	2026-05-16T15:09:31.1060640Z 
+build	build	2026-05-16T15:09:31.1061440Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:107: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1062180Z 
+build	build	2026-05-16T15:09:31.1062500Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	build	2026-05-16T15:09:31.1063120Z                                                                              ^
+build	build	2026-05-16T15:09:31.1063300Z 
+build	build	2026-05-16T15:09:31.1063300Z 
+build	build	2026-05-16T15:09:31.1063300Z 
+build	build	2026-05-16T15:09:31.1064080Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:128: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1064820Z 
+build	build	2026-05-16T15:09:31.1065140Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	build	2026-05-16T15:09:31.1065790Z                                                                                                           ^
+build	build	2026-05-16T15:09:31.1065990Z 
+build	build	2026-05-16T15:09:31.1065990Z 
+build	build	2026-05-16T15:09:31.1065990Z 
+build	build	2026-05-16T15:09:31.1066620Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1067250Z 
+build	build	2026-05-16T15:09:31.1067290Z     var shape: Shape
+build	build	2026-05-16T15:09:31.1067670Z                                                                                                                                ^
+build	build	2026-05-16T15:09:31.1068130Z 
+build	build	2026-05-16T15:09:31.1068140Z 
+build	build	2026-05-16T15:09:31.1068140Z 
+build	build	2026-05-16T15:09:31.1068800Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1069460Z 
+build	build	2026-05-16T15:09:31.1069860Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1070520Z                ^~~~~
+build	build	2026-05-16T15:09:31.1070610Z 
+build	build	2026-05-16T15:09:31.1070610Z 
+build	build	2026-05-16T15:09:31.1070620Z 
+build	build	2026-05-16T15:09:31.1071250Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1071870Z 
+build	build	2026-05-16T15:09:31.1071940Z     var shape: Shape
+build	build	2026-05-16T15:09:31.1072290Z                                                                                            ^~~~~
+build	build	2026-05-16T15:09:31.1072480Z 
+build	build	2026-05-16T15:09:31.1072480Z 
+build	build	2026-05-16T15:09:31.1072480Z 
+build	build	2026-05-16T15:09:31.1073120Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1073730Z 
+build	build	2026-05-16T15:09:31.1074120Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1074740Z                ^~~~~
+build	build	2026-05-16T15:09:31.1074830Z 
+build	build	2026-05-16T15:09:31.1074840Z 
+build	build	2026-05-16T15:09:31.1074840Z 
+build	build	2026-05-16T15:09:31.1075490Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:11:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1076110Z 
+build	build	2026-05-16T15:09:31.1076160Z     var shape: Shape
+build	build	2026-05-16T15:09:31.1076620Z                                                                                            ^~~~~
+build	build	2026-05-16T15:09:31.1076800Z 
+build	build	2026-05-16T15:09:31.1076800Z 
+build	build	2026-05-16T15:09:31.1076810Z 
+build	build	2026-05-16T15:09:31.1077440Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:15:63: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1078060Z 
+build	build	2026-05-16T15:09:31.1078380Z     public init(foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1078910Z                ^~~~~
+build	build	2026-05-16T15:09:31.1079000Z 
+build	build	2026-05-16T15:09:31.1079000Z 
+build	build	2026-05-16T15:09:31.1079000Z 
+build	build	2026-05-16T15:09:31.1079560Z ⚠️  /Users/runner/work/lara/lara/lara/classes/IconThemeGalleryManager.swift:109:81: main actor-isolated static property 'shared' can not be referenced from a nonisolated context
+build	build	2026-05-16T15:09:31.1080170Z 
+build	build	2026-05-16T15:09:31.1080390Z     func downloadAndImport(_ theme: GalleryTheme, importer: IconThemeManager = .shared) async throws {
+build	build	2026-05-16T15:09:31.1080980Z                                                               ^~~~~
+build	build	2026-05-16T15:09:31.1081240Z 
+build	build	2026-05-16T15:09:31.1081250Z 
+build	build	2026-05-16T15:09:31.1081320Z 
+build	build	2026-05-16T15:09:31.1081820Z ⚠️  /Users/runner/work/lara/lara/lara/classes/laramgr.swift:493:17: initialization of immutable value 'fm' was never used; consider replacing with assignment to '_' or removing it
+build	build	2026-05-16T15:09:31.1082400Z 
+build	build	2026-05-16T15:09:31.1082470Z             let fm = FileManager.default
+build	build	2026-05-16T15:09:31.1082760Z                ^
+build	build	2026-05-16T15:09:31.1082840Z 
+build	build	2026-05-16T15:09:31.1082840Z 
+build	build	2026-05-16T15:09:31.1082840Z 
+build	build	2026-05-16T15:09:31.1083430Z ⚠️  /Users/runner/work/lara/lara/lara/classes/laramgr.swift:495:17: initialization of immutable value 'bundleFolder' was never used; consider replacing with assignment to '_' or removing it
+build	build	2026-05-16T15:09:31.1084170Z 
+build	build	2026-05-16T15:09:31.1084310Z             let bundleFolder = "/private/var/containers/Bundle/Application"
+build	build	2026-05-16T15:09:31.1084670Z             ~~~~^~
+build	build	2026-05-16T15:09:31.1084760Z 
+build	build	2026-05-16T15:09:31.1084760Z 
+build	build	2026-05-16T15:09:31.1084760Z 
+build	build	2026-05-16T15:09:31.1086600Z ⚠️  /Users/runner/work/lara/lara/lara/classes/Logger.swift:245:13: variable 'text' was never mutated; consider changing to 'let' constant
+build	build	2026-05-16T15:09:31.1087090Z 
+build	build	2026-05-16T15:09:31.1087170Z         var text = panding + chunk
+build	build	2026-05-16T15:09:31.1087510Z             ~~~~^~~~~~~~~~~~
+build	build	2026-05-16T15:09:31.1087610Z 
+build	build	2026-05-16T15:09:31.1087620Z 
+build	build	2026-05-16T15:09:31.1087620Z 
+build	build	2026-05-16T15:09:31.1087980Z ⚠️  /Users/runner/work/lara/lara/lara/classes/Logger.swift:310:9: result of 'try?' is unused
+build	build	2026-05-16T15:09:31.1088300Z 
+build	build	2026-05-16T15:09:31.1088370Z         try? logfilehandle?.seekToEnd()
+build	build	2026-05-16T15:09:31.1088790Z         ~~~ ^
+build	build	2026-05-16T15:09:31.1088890Z 
+build	build	2026-05-16T15:09:31.1088890Z 
+build	build	2026-05-16T15:09:31.1088890Z 
+build	build	2026-05-16T15:09:31.1089240Z ⚠️  /Users/runner/work/lara/lara/lara/classes/Logger.swift:333:9: result of 'try?' is unused
+build	build	2026-05-16T15:09:31.1089640Z 
+build	build	2026-05-16T15:09:31.1089700Z         try? logfilehandle?.seekToEnd()
+build	build	2026-05-16T15:09:31.1090000Z         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build	build	2026-05-16T15:09:31.1090120Z 
+build	build	2026-05-16T15:09:31.1090120Z 
+build	build	2026-05-16T15:09:31.1090130Z 
+build	build	2026-05-16T15:09:31.1090690Z ⚠️  /Users/runner/work/lara/lara/lara/funcs/keepalive.swift:70:36: forming 'UnsafeRawPointer' to a variable of type 'T'; this is likely incorrect because 'T' may contain an object reference.
+build	build	2026-05-16T15:09:31.1091270Z 
+build	build	2026-05-16T15:09:31.1091400Z         wavdata.append(Data(bytes: &v, count: MemoryLayout<T>.size))
+build	build	2026-05-16T15:09:31.1091720Z         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build	build	2026-05-16T15:09:31.1091910Z 
+build	build	2026-05-16T15:09:31.1091910Z 
+build	build	2026-05-16T15:09:31.1091920Z 
+build	build	2026-05-16T15:09:31.1092560Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1093440Z 
+build	build	2026-05-16T15:09:31.1093490Z     var shape: Shape
+build	build	2026-05-16T15:09:31.1093720Z                                    ^
+build	build	2026-05-16T15:09:31.1093920Z 
+build	build	2026-05-16T15:09:31.1093920Z 
+build	build	2026-05-16T15:09:31.1093920Z 
+build	build	2026-05-16T15:09:31.1094580Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	build	2026-05-16T15:09:31.1095320Z 
+build	build	2026-05-16T15:09:31.1095730Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	build	2026-05-16T15:09:31.1096360Z                ^~~~~
+build	build	2026-05-16T15:09:31.1096560Z 
+build	build	2026-05-16T15:09:31.1096570Z 
+build	build	2026-05-16T15:09:31.1096770Z ▸ Compiling vnode.m
+build	build	2026-05-16T15:09:31.1097140Z ▸ Compiling vfs.m
+build	build	2026-05-16T15:09:31.1097430Z 
+build	build	2026-05-16T15:09:31.1097840Z ⚠️  /Users/runner/work/lara/lara/lara/kexploit/pe/vfs.m:96:12: unused function 'vnode_getname' [-Wunused-function]
+build	build	2026-05-16T15:09:31.1098360Z 
+build	build	2026-05-16T15:09:31.1099080Z    96 | static int vnode_getname(uint64_t vn, char *out, size_t max_len) {
+build	build	2026-05-16T15:09:31.1100420Z                                                                                            ^~~~~
+build	build	2026-05-16T15:09:31.1100940Z 
+build	build	2026-05-16T15:09:31.1100960Z 
+build	build	2026-05-16T15:09:31.1101100Z ▸ Compiling utils.m
+build	build	2026-05-16T15:09:31.1101780Z ▸ Compiling sbx.m
+build	build	2026-05-16T15:09:31.1102210Z ▸ Compiling persistence.m
+build	build	2026-05-16T15:09:31.1103270Z ▸ Compiling darksword.m
+build	build	2026-05-16T15:09:31.1104260Z ▸ Compiling apfs.m
+build	build	2026-05-16T15:09:31.1106120Z ▸ Compiling VM.m
+build	build	2026-05-16T15:09:31.1107130Z ▸ Compiling rc.m
+build	build	2026-05-16T15:09:31.1107870Z ▸ Compiling offsets.m
+build	build	2026-05-16T15:09:31.1815000Z ##[error]Process completed with exit code 65.
+build	Post checkout	﻿2026-05-16T15:09:31.2038870Z Post job cleanup.
+build	Post checkout	2026-05-16T15:09:31.4970610Z [command]/opt/homebrew/bin/git version
+build	Post checkout	2026-05-16T15:09:31.5753850Z git version 2.54.0
+build	Post checkout	2026-05-16T15:09:31.5789240Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/41fdc7f6-02ec-4f3d-8042-dd96f1a3bfec/.gitconfig'
+build	Post checkout	2026-05-16T15:09:31.5796400Z Temporarily overriding HOME='/Users/runner/work/_temp/41fdc7f6-02ec-4f3d-8042-dd96f1a3bfec' before making global git config changes
+build	Post checkout	2026-05-16T15:09:31.5797140Z Adding repository directory to the temporary git global config as a safe directory
+build	Post checkout	2026-05-16T15:09:31.5800410Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/lara/lara
+build	Post checkout	2026-05-16T15:09:31.5902670Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post checkout	2026-05-16T15:09:31.6211450Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post checkout	2026-05-16T15:09:31.7165770Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post checkout	2026-05-16T15:09:31.7227750Z http.https://github.com/.extraheader
+build	Post checkout	2026-05-16T15:09:31.7237240Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post checkout	2026-05-16T15:09:31.7309660Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post checkout	2026-05-16T15:09:31.8057380Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post checkout	2026-05-16T15:09:31.8120790Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-05-16T15:09:31.8937230Z Cleaning up orphan processes
+build	Complete job	2026-05-16T15:09:31.9240700Z Terminate orphan process: pid (16375) (ibtoold)
+build	Complete job	2026-05-16T15:09:31.9536260Z Terminate orphan process: pid (16105) (ibtoold)
+build	Complete job	2026-05-16T15:09:32.4392280Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

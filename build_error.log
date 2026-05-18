@@ -1,0 +1,500 @@
+build	UNKNOWN STEP	2026-05-14T16:56:38.3395760Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	UNKNOWN STEP	2026-05-14T16:56:38.5160300Z Complete job name: build
+build	UNKNOWN STEP	2026-05-14T16:56:38.5555300Z ##[group]Run actions/checkout@v4
+build	UNKNOWN STEP	2026-05-14T16:56:38.5555810Z with:
+build	UNKNOWN STEP	2026-05-14T16:56:38.5556090Z   fetch-depth: 0
+build	UNKNOWN STEP	2026-05-14T16:56:38.5556380Z   repository: lackO9373/lara
+build	UNKNOWN STEP	2026-05-14T16:56:38.5556950Z   token: ***
+build	UNKNOWN STEP	2026-05-14T16:56:38.5557260Z   ssh-strict: true
+build	UNKNOWN STEP	2026-05-14T16:56:38.5557540Z   ssh-user: git
+build	UNKNOWN STEP	2026-05-14T16:56:38.5557820Z   persist-credentials: true
+build	UNKNOWN STEP	2026-05-14T16:56:38.5558170Z   clean: true
+build	UNKNOWN STEP	2026-05-14T16:56:38.5558490Z   sparse-checkout-cone-mode: true
+build	UNKNOWN STEP	2026-05-14T16:56:38.5558840Z   fetch-tags: false
+build	UNKNOWN STEP	2026-05-14T16:56:38.5559120Z   show-progress: true
+build	UNKNOWN STEP	2026-05-14T16:56:38.5559410Z   lfs: false
+build	UNKNOWN STEP	2026-05-14T16:56:38.5559670Z   submodules: false
+build	UNKNOWN STEP	2026-05-14T16:56:38.5559960Z   set-safe-directory: true
+build	UNKNOWN STEP	2026-05-14T16:56:38.5560480Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:38.8613190Z Syncing repository: lackO9373/lara
+build	UNKNOWN STEP	2026-05-14T16:56:38.8615180Z ##[group]Getting Git version info
+build	UNKNOWN STEP	2026-05-14T16:56:38.8615720Z Working directory is '/Users/runner/work/lara/lara'
+build	UNKNOWN STEP	2026-05-14T16:56:38.8616510Z [command]/opt/homebrew/bin/git version
+build	UNKNOWN STEP	2026-05-14T16:56:38.9504570Z git version 2.54.0
+build	UNKNOWN STEP	2026-05-14T16:56:38.9538620Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:38.9546340Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/16edd238-bc8b-4fb3-9ad9-43fe7b8df704/.gitconfig'
+build	UNKNOWN STEP	2026-05-14T16:56:38.9553690Z Temporarily overriding HOME='/Users/runner/work/_temp/16edd238-bc8b-4fb3-9ad9-43fe7b8df704' before making global git config changes
+build	UNKNOWN STEP	2026-05-14T16:56:38.9554610Z Adding repository directory to the temporary git global config as a safe directory
+build	UNKNOWN STEP	2026-05-14T16:56:38.9563430Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/lara/lara
+build	UNKNOWN STEP	2026-05-14T16:56:38.9658660Z Deleting the contents of '/Users/runner/work/lara/lara'
+build	UNKNOWN STEP	2026-05-14T16:56:38.9661440Z ##[group]Initializing the repository
+build	UNKNOWN STEP	2026-05-14T16:56:38.9665420Z [command]/opt/homebrew/bin/git init /Users/runner/work/lara/lara
+build	UNKNOWN STEP	2026-05-14T16:56:38.9867630Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	UNKNOWN STEP	2026-05-14T16:56:38.9870710Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	UNKNOWN STEP	2026-05-14T16:56:38.9871920Z hint: to use in all of your new repositories, which will suppress this warning,
+build	UNKNOWN STEP	2026-05-14T16:56:38.9872560Z hint: call:
+build	UNKNOWN STEP	2026-05-14T16:56:38.9873180Z hint:
+build	UNKNOWN STEP	2026-05-14T16:56:38.9874360Z hint: 	git config --global init.defaultBranch <name>
+build	UNKNOWN STEP	2026-05-14T16:56:38.9874910Z hint:
+build	UNKNOWN STEP	2026-05-14T16:56:38.9875580Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	UNKNOWN STEP	2026-05-14T16:56:38.9876320Z hint: 'development'. The just-created branch can be renamed via this command:
+build	UNKNOWN STEP	2026-05-14T16:56:38.9877030Z hint:
+build	UNKNOWN STEP	2026-05-14T16:56:38.9877470Z hint: 	git branch -m <name>
+build	UNKNOWN STEP	2026-05-14T16:56:38.9878000Z hint:
+build	UNKNOWN STEP	2026-05-14T16:56:38.9878560Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	UNKNOWN STEP	2026-05-14T16:56:38.9879670Z Initialized empty Git repository in /Users/runner/work/lara/lara/.git/
+build	UNKNOWN STEP	2026-05-14T16:56:38.9881820Z [command]/opt/homebrew/bin/git remote add origin https://github.com/lackO9373/lara
+build	UNKNOWN STEP	2026-05-14T16:56:38.9958950Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:38.9959600Z ##[group]Disabling automatic garbage collection
+build	UNKNOWN STEP	2026-05-14T16:56:38.9961540Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+build	UNKNOWN STEP	2026-05-14T16:56:39.0024280Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:39.0024770Z ##[group]Setting up auth
+build	UNKNOWN STEP	2026-05-14T16:56:39.0028830Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	UNKNOWN STEP	2026-05-14T16:56:39.0090520Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	UNKNOWN STEP	2026-05-14T16:56:39.1804350Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	UNKNOWN STEP	2026-05-14T16:56:39.1872120Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	UNKNOWN STEP	2026-05-14T16:56:39.2625530Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	UNKNOWN STEP	2026-05-14T16:56:39.2682390Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	UNKNOWN STEP	2026-05-14T16:56:39.3466580Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	UNKNOWN STEP	2026-05-14T16:56:39.3535170Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:39.3535740Z ##[group]Fetching the repository
+build	UNKNOWN STEP	2026-05-14T16:56:39.3540530Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+build	UNKNOWN STEP	2026-05-14T16:56:47.0001580Z From https://github.com/lackO9373/lara
+build	UNKNOWN STEP	2026-05-14T16:56:47.0003080Z  * [new branch]      main       -> origin/main
+build	UNKNOWN STEP	2026-05-14T16:56:47.0003650Z  * [new tag]         nightly    -> nightly
+build	UNKNOWN STEP	2026-05-14T16:56:47.0109290Z [command]/opt/homebrew/bin/git branch --list --remote origin/main
+build	UNKNOWN STEP	2026-05-14T16:56:47.0190720Z   origin/main
+build	UNKNOWN STEP	2026-05-14T16:56:47.0199120Z [command]/opt/homebrew/bin/git rev-parse refs/remotes/origin/main
+build	UNKNOWN STEP	2026-05-14T16:56:47.0252790Z 22e0d8b833b80a0c3716b40fbf5402d2c4e05a04
+build	UNKNOWN STEP	2026-05-14T16:56:47.0255040Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:47.0255700Z ##[group]Determining the checkout info
+build	UNKNOWN STEP	2026-05-14T16:56:47.0256460Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:47.0259210Z [command]/opt/homebrew/bin/git sparse-checkout disable
+build	UNKNOWN STEP	2026-05-14T16:56:47.0336580Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+build	UNKNOWN STEP	2026-05-14T16:56:47.0400570Z ##[group]Checking out the ref
+build	UNKNOWN STEP	2026-05-14T16:56:47.0403570Z [command]/opt/homebrew/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	UNKNOWN STEP	2026-05-14T16:56:47.0905590Z Switched to a new branch 'main'
+build	UNKNOWN STEP	2026-05-14T16:56:47.0909800Z branch 'main' set up to track 'origin/main'.
+build	UNKNOWN STEP	2026-05-14T16:56:47.0914470Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:47.0996570Z [command]/opt/homebrew/bin/git log -1 --format=%H
+build	UNKNOWN STEP	2026-05-14T16:56:47.1058250Z 22e0d8b833b80a0c3716b40fbf5402d2c4e05a04
+build	UNKNOWN STEP	2026-05-14T16:56:47.1254540Z ##[group]Run maxim-lobanov/setup-xcode@v1
+build	UNKNOWN STEP	2026-05-14T16:56:47.1255310Z with:
+build	UNKNOWN STEP	2026-05-14T16:56:47.1255850Z   xcode-version: latest-stable
+build	UNKNOWN STEP	2026-05-14T16:56:47.1256510Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:47.4207120Z Switching Xcode to version 'latest-stable'...
+build	UNKNOWN STEP	2026-05-14T16:56:47.4729560Z Xcode is set to 26.4.1 (17E202)
+build	UNKNOWN STEP	2026-05-14T16:56:47.4846720Z ##[group]Run xcodebuild -version
+build	UNKNOWN STEP	2026-05-14T16:56:47.4847060Z [36;1mxcodebuild -version[0m
+build	UNKNOWN STEP	2026-05-14T16:56:47.4889030Z shell: /bin/bash -e {0}
+build	UNKNOWN STEP	2026-05-14T16:56:47.4889240Z env:
+build	UNKNOWN STEP	2026-05-14T16:56:47.4889500Z   MD_APPLE_SDK_ROOT: /Applications/Xcode_26.4.1.app
+build	UNKNOWN STEP	2026-05-14T16:56:47.4889840Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:49.7193040Z Xcode 26.4.1
+build	UNKNOWN STEP	2026-05-14T16:56:49.7194050Z Build version 17E202
+build	UNKNOWN STEP	2026-05-14T16:56:49.7230880Z ##[group]Run brew install ldid
+build	UNKNOWN STEP	2026-05-14T16:56:49.7231100Z [36;1mbrew install ldid[0m
+build	UNKNOWN STEP	2026-05-14T16:56:49.7259040Z shell: /bin/bash -e {0}
+build	UNKNOWN STEP	2026-05-14T16:56:49.7259200Z env:
+build	UNKNOWN STEP	2026-05-14T16:56:49.7259510Z   MD_APPLE_SDK_ROOT: /Applications/Xcode_26.4.1.app
+build	UNKNOWN STEP	2026-05-14T16:56:49.7259820Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:51.7375660Z ✔︎ JSON API formula_tap_migrations.jws.json
+build	UNKNOWN STEP	2026-05-14T16:56:53.2169770Z ✔︎ JSON API cask_tap_migrations.jws.json
+build	UNKNOWN STEP	2026-05-14T16:56:53.2170300Z [32m==>[0m [1mFetching downloads for: [32mldid[39m[0m
+build	UNKNOWN STEP	2026-05-14T16:56:53.6633230Z ✔︎ Bottle Manifest ldid (2.1.5_1)
+build	UNKNOWN STEP	2026-05-14T16:56:54.3460520Z ✔︎ Bottle Manifest libplist (2.7.0)
+build	UNKNOWN STEP	2026-05-14T16:56:54.4729570Z ✔︎ Bottle libplist (2.7.0)
+build	UNKNOWN STEP	2026-05-14T16:56:54.4730880Z ✔︎ Bottle ldid (2.1.5_1)
+build	UNKNOWN STEP	2026-05-14T16:56:54.6875640Z [32m==>[0m [1mInstalling ldid dependency: [32mlibplist[39m[0m
+build	UNKNOWN STEP	2026-05-14T16:56:54.6935450Z [34m==>[0m [1mPouring libplist--2.7.0.arm64_tahoe.bottle.tar.gz[0m
+build	UNKNOWN STEP	2026-05-14T16:56:56.1718970Z 🍺  /opt/homebrew/Cellar/libplist/2.7.0: 32 files, 659.7KB
+build	UNKNOWN STEP	2026-05-14T16:56:56.1726570Z [34m==>[0m [1mPouring ldid--2.1.5_1.arm64_tahoe.bottle.1.tar.gz[0m
+build	UNKNOWN STEP	2026-05-14T16:56:57.2856180Z 🍺  /opt/homebrew/Cellar/ldid/2.1.5_1: 6 files, 292.2KB
+build	UNKNOWN STEP	2026-05-14T16:56:57.3212380Z ##[group]Run chmod +x scripts/build_ipa.sh
+build	UNKNOWN STEP	2026-05-14T16:56:57.3212640Z [36;1mchmod +x scripts/build_ipa.sh[0m
+build	UNKNOWN STEP	2026-05-14T16:56:57.3212840Z [36;1m./scripts/build_ipa.sh[0m
+build	UNKNOWN STEP	2026-05-14T16:56:57.3240770Z shell: /bin/bash -e {0}
+build	UNKNOWN STEP	2026-05-14T16:56:57.3240920Z env:
+build	UNKNOWN STEP	2026-05-14T16:56:57.3241080Z   MD_APPLE_SDK_ROOT: /Applications/Xcode_26.4.1.app
+build	UNKNOWN STEP	2026-05-14T16:56:57.3241280Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:56:57.3898250Z Build Started!
+build	UNKNOWN STEP	2026-05-14T16:56:57.3898550Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4143890Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4157860Z ⚠️  /Users/runner/work/lara/lara/lara/classes/IconThemeGalleryManager.swift:109:81: main actor-isolated static property 'shared' can not be referenced from a nonisolated context
+build	UNKNOWN STEP	2026-05-14T16:57:16.4159690Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4160460Z     func downloadAndImport(_ theme: GalleryTheme, importer: IconThemeManager = .shared) async throws {
+build	UNKNOWN STEP	2026-05-14T16:57:16.4171350Z                                                                                 ^
+build	UNKNOWN STEP	2026-05-14T16:57:16.4190340Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4216900Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4271130Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4289220Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.4290330Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4302250Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:16.4403570Z                ^
+build	UNKNOWN STEP	2026-05-14T16:57:16.4403900Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4465030Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4480310Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4481560Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.4482310Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4583680Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:16.4608820Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.4609970Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4610070Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4610160Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4612410Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.4613850Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4614560Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:16.4623990Z                                                                                            ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.4627100Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4661510Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4661620Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4662600Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.4663360Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4663910Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:16.4677350Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.4677580Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4677670Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4677760Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4678630Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.4679360Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4679490Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:16.4679940Z                                                                                            ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.4680210Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4711260Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4711690Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4712630Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.4713450Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.4714740Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:16.4815730Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.4916300Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5016740Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5052970Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5054180Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:11:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.5055000Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5055140Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:16.5055620Z                                                                                            ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.5057010Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5057110Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5057200Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5058090Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:15:63: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.5058930Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5160090Z     public init(foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:16.5261590Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.5362250Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5383670Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5384290Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5485940Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:75: cannot use default expression for inference of 'T.Type' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.5587580Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.5688750Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	UNKNOWN STEP	2026-05-14T16:57:16.5770260Z                                                               ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:16.5896860Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6070780Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6086910Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6090400Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:100: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.6120550Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6121240Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	UNKNOWN STEP	2026-05-14T16:57:16.6122120Z                                                                           ^
+build	UNKNOWN STEP	2026-05-14T16:57:16.6124450Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6124570Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6124670Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6125710Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:120: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.6126640Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6127180Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	UNKNOWN STEP	2026-05-14T16:57:16.6127900Z                                                                                                    ^
+build	UNKNOWN STEP	2026-05-14T16:57:16.6128260Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6128350Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6128430Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6138600Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:78: cannot use default expression for inference of 'T.Type' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.6184950Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6185720Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	UNKNOWN STEP	2026-05-14T16:57:16.6186960Z                                                                                                                        ^
+build	UNKNOWN STEP	2026-05-14T16:57:16.6188630Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6188720Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6188810Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6189880Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:107: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.6202760Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6218810Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	UNKNOWN STEP	2026-05-14T16:57:16.6219600Z                                                                              ^
+build	UNKNOWN STEP	2026-05-14T16:57:16.6219880Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6219980Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6220070Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6223400Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:128: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:16.6224300Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6224820Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	UNKNOWN STEP	2026-05-14T16:57:16.6243080Z                                                                                                           ^
+build	UNKNOWN STEP	2026-05-14T16:57:16.6260160Z 
+build	UNKNOWN STEP	2026-05-14T16:57:16.6260260Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6577070Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6679800Z ⚠️  /Users/runner/work/lara/lara/lara/classes/IconThemeGalleryManager.swift:109:81: main actor-isolated static property 'shared' can not be referenced from a nonisolated context
+build	UNKNOWN STEP	2026-05-14T16:57:18.6722400Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6723160Z     func downloadAndImport(_ theme: GalleryTheme, importer: IconThemeManager = .shared) async throws {
+build	UNKNOWN STEP	2026-05-14T16:57:18.6724350Z                                                                                                                                ^
+build	UNKNOWN STEP	2026-05-14T16:57:18.6776210Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6776220Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6776230Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6777480Z ⚠️  /Users/runner/work/lara/lara/lara/classes/laramgr.swift:493:17: initialization of immutable value 'fm' was never used; consider replacing with assignment to '_' or removing it
+build	UNKNOWN STEP	2026-05-14T16:57:18.6778070Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6778230Z             let fm = FileManager.default
+build	UNKNOWN STEP	2026-05-14T16:57:18.6778570Z                ^
+build	UNKNOWN STEP	2026-05-14T16:57:18.6778760Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6778760Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6778760Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6779900Z ⚠️  /Users/runner/work/lara/lara/lara/classes/laramgr.swift:495:17: initialization of immutable value 'bundleFolder' was never used; consider replacing with assignment to '_' or removing it
+build	UNKNOWN STEP	2026-05-14T16:57:18.6780940Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6781200Z             let bundleFolder = "/private/var/containers/Bundle/Application"
+build	UNKNOWN STEP	2026-05-14T16:57:18.6782290Z             ~~~~^~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6782480Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6782480Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6782480Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6783210Z ⚠️  /Users/runner/work/lara/lara/lara/classes/Logger.swift:245:13: variable 'text' was never mutated; consider changing to 'let' constant
+build	UNKNOWN STEP	2026-05-14T16:57:18.6784000Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6784150Z         var text = panding + chunk
+build	UNKNOWN STEP	2026-05-14T16:57:18.6784590Z             ~~~~^~~~~~~~~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6784770Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6784770Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6784770Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6785370Z ⚠️  /Users/runner/work/lara/lara/lara/classes/Logger.swift:310:9: result of 'try?' is unused
+build	UNKNOWN STEP	2026-05-14T16:57:18.6785650Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6785790Z         try? logfilehandle?.seekToEnd()
+build	UNKNOWN STEP	2026-05-14T16:57:18.6786030Z         ~~~ ^
+build	UNKNOWN STEP	2026-05-14T16:57:18.6786180Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6786180Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6786180Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6786430Z ⚠️  /Users/runner/work/lara/lara/lara/classes/Logger.swift:333:9: result of 'try?' is unused
+build	UNKNOWN STEP	2026-05-14T16:57:18.6786770Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6786890Z         try? logfilehandle?.seekToEnd()
+build	UNKNOWN STEP	2026-05-14T16:57:18.6787590Z         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6787800Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6787800Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6787810Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6788410Z ⚠️  /Users/runner/work/lara/lara/lara/funcs/keepalive.swift:70:36: forming 'UnsafeRawPointer' to a variable of type 'T'; this is likely incorrect because 'T' may contain an object reference.
+build	UNKNOWN STEP	2026-05-14T16:57:18.6789080Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6789270Z         wavdata.append(Data(bytes: &v, count: MemoryLayout<T>.size))
+build	UNKNOWN STEP	2026-05-14T16:57:18.6789720Z         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6789930Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6789940Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6789940Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6790810Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6791550Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6791780Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:18.6792070Z                                    ^
+build	UNKNOWN STEP	2026-05-14T16:57:18.6792300Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6792310Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6792310Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6792880Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/FancyButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6793790Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6794310Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:18.6794950Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6795120Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6795120Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6916450Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6938270Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6939390Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6939580Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:18.6939920Z                                                                                            ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6940240Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6940280Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6940330Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6941000Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/PrimaryButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6941600Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6942100Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:18.6942750Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6942980Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6943030Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6943080Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6943810Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:12:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6944440Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6944620Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:18.6944940Z                                                                                            ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6945240Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6945280Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6945330Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6946010Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Buttons/TranslucentButtonStyle.swift:16:92: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6946680Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6947110Z     public init(color: Color = .accentColor, foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:18.6947780Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6947910Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6947960Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6948000Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6948860Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:11:16: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6949550Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6949640Z     var shape: Shape
+build	UNKNOWN STEP	2026-05-14T16:57:18.6949990Z                                                                                            ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6950220Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6950270Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6950370Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6951090Z ⚠️  /Users/runner/work/lara/lara/lara/PartyUI/UI/Inputs/TextFieldBackground.swift:15:63: use of protocol 'Shape' as a type must be written 'any Shape'; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:18.6951690Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6952110Z     public init(foregroundStyle: Color = .accentColor, shape: Shape = .rect(cornerRadius: cornerRad.component), useFullWidth: Bool = true) {
+build	UNKNOWN STEP	2026-05-14T16:57:18.6952640Z                ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:18.6952820Z 
+build	UNKNOWN STEP	2026-05-14T16:57:18.6952880Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.3901260Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4004710Z ⚠️  /Users/runner/work/lara/lara/lara/classes/IconThemeGalleryManager.swift:109:81: main actor-isolated static property 'shared' can not be referenced from a nonisolated context
+build	UNKNOWN STEP	2026-05-14T16:57:26.4092640Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4096990Z     func downloadAndImport(_ theme: GalleryTheme, importer: IconThemeManager = .shared) async throws {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4128890Z                                                               ^~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:26.4132910Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4162790Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4167290Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4196610Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/DarkBoardView.swift:443:22: 'init(documentTypes:in:)' was deprecated in iOS 14.0
+build	UNKNOWN STEP	2026-05-14T16:57:26.4198810Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4207600Z         let picker = UIDocumentPickerViewController(documentTypes: documentTypes, in: .open)
+build	UNKNOWN STEP	2026-05-14T16:57:26.4208100Z                ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4210210Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4210740Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4210920Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4212970Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:75: cannot use default expression for inference of 'T.Type' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:26.4215730Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4216200Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4216760Z                      ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4216950Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4216950Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4216960Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4217740Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:100: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:26.4218500Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4218890Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4219440Z                                                                           ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4219660Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4219660Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4219660Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4220430Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/springboard/LGView.swift:146:120: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:26.4221160Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4221540Z     private func gpkeybinding<T: Equatable>(_ key: String, type: T.Type = Bool.self, default: T? = false, enable: T? = true) -> Binding<Bool> {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4222260Z                                                                                                    ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4222520Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4222530Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4222530Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4223720Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/system/VarCleanView.swift:148:13: main actor-isolated global function 'loadvarcleangroups()' cannot be called from outside of the actor; this is an error in the Swift 6 language mode
+build	UNKNOWN STEP	2026-05-14T16:57:26.4224500Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4224880Z             loadvarcleangroups()
+build	UNKNOWN STEP	2026-05-14T16:57:26.4225340Z                                                                                                                        ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4225740Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4323250Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4396770Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4402060Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:78: cannot use default expression for inference of 'T.Type' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:26.4425750Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4429600Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4435150Z             ^~~~~~~~~~~~~~~~~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:26.4453520Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4456480Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4463490Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4466330Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:107: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:26.4478810Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4482180Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4488790Z                                                                              ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4504350Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4507200Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4512170Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4530350Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/mobilegestalt/GestaltView.swift:284:128: cannot use default expression for inference of 'T?' because it is inferrable from parameters #1, #2, #3; this will be an error in a future Swift language mode
+build	UNKNOWN STEP	2026-05-14T16:57:26.4534700Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4562070Z     private func mgKeyBinding<T: Equatable>(_ keys: [String], type: T.Type = Int.self, defaultValue: T? = 0, enableValue: T? = 1) -> Binding<Bool>  {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4565910Z                                                                                                           ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4587560Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4590570Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4613480Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4622420Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/FontPicker.swift:539:45: result of call to 'run(resultType:body:)' is unused
+build	UNKNOWN STEP	2026-05-14T16:57:26.4667140Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4670220Z                             await MainActor.run {
+build	UNKNOWN STEP	2026-05-14T16:57:26.4691590Z                                                                                                                                ^
+build	UNKNOWN STEP	2026-05-14T16:57:26.4694680Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4723910Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4727950Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4752290Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/FontPicker.swift:592:25: result of call to 'run(resultType:body:)' is unused
+build	UNKNOWN STEP	2026-05-14T16:57:26.4755560Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4777090Z         await MainActor.run { downloading.insert(font.url) }
+build	UNKNOWN STEP	2026-05-14T16:57:26.4780820Z                                             ^   ~
+build	UNKNOWN STEP	2026-05-14T16:57:26.4806330Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4809450Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4835200Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4839120Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/FontPicker.swift:617:25: result of call to 'run(resultType:body:)' is unused
+build	UNKNOWN STEP	2026-05-14T16:57:26.4861560Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4864610Z         await MainActor.run { downloading.insert(emoji.url) }
+build	UNKNOWN STEP	2026-05-14T16:57:26.4955310Z                         ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:26.4979520Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4982670Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.4999500Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5006710Z ⚠️  /Users/runner/work/lara/lara/lara/views/tweaks/ui/PasscodeView.swift:248:13: initialization of immutable value 'pageSize' was never used; consider replacing with assignment to '_' or removing it
+build	UNKNOWN STEP	2026-05-14T16:57:26.5010660Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5055970Z         let pageSize = 16384
+build	UNKNOWN STEP	2026-05-14T16:57:26.5172810Z                         ^   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:26.5208520Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5209130Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5209970Z ▸ Processing Info.plist
+build	UNKNOWN STEP	2026-05-14T16:57:26.5210350Z ▸ Compiling vnode.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5210690Z ▸ Compiling vfs.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5210900Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5303540Z ⚠️  /Users/runner/work/lara/lara/lara/kexploit/pe/vfs.m:96:12: unused function 'vnode_getname' [-Wunused-function]
+build	UNKNOWN STEP	2026-05-14T16:57:26.5314090Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5318330Z    96 | static int vnode_getname(uint64_t vn, char *out, size_t max_len) {
+build	UNKNOWN STEP	2026-05-14T16:57:26.5318610Z         ~~~~^~~~~~~~
+build	UNKNOWN STEP	2026-05-14T16:57:26.5318840Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5318970Z 
+build	UNKNOWN STEP	2026-05-14T16:57:26.5319320Z ▸ Compiling utils.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5319690Z ▸ Compiling sbx.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5320060Z ▸ Compiling persistence.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5323460Z ▸ Compiling darksword.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5324200Z ▸ Compiling apfs.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5324480Z ▸ Compiling VM.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5324830Z ▸ Compiling PAC.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5325430Z ▸ Compiling IconCacheClearer.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5327880Z ▸ Compiling FindCacheDataOffset.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5328500Z ▸ Compiling Exception.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5328820Z ▸ Compiling rc.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5330940Z ▸ Compiling offsets.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5331460Z ▸ Compiling VarCleanBridge.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5331890Z ▸ Compiling Thread.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5332590Z ▸ Compiling RemoteCall.m
+build	UNKNOWN STEP	2026-05-14T16:57:26.5333140Z ▸ Linking lara
+build	UNKNOWN STEP	2026-05-14T16:57:26.9388270Z ▸ Running script 'Force Sign Embedded Dylibs'
+build	UNKNOWN STEP	2026-05-14T16:57:26.9469480Z ▸ Copying /Users/runner/Library/Developer/Xcode/DerivedData/lara-btlmbegntbniggfueaocexfeppba/Build/Intermediates.noindex/ArchiveIntermediates/lara/InstallationBuildProductsLocation/Applications/lara.app/VarCleanRules.json
+build	UNKNOWN STEP	2026-05-14T16:57:26.9479660Z ▸ Copying /Users/runner/Library/Developer/Xcode/DerivedData/lara-btlmbegntbniggfueaocexfeppba/Build/Intermediates.noindex/ArchiveIntermediates/lara/InstallationBuildProductsLocation/Applications/lara.app/LICENSE_libgrabkernel2.md
+build	UNKNOWN STEP	2026-05-14T16:57:26.9481080Z ▸ Copying /Users/runner/Library/Developer/Xcode/DerivedData/lara-btlmbegntbniggfueaocexfeppba/Build/Intermediates.noindex/ArchiveIntermediates/lara/InstallationBuildProductsLocation/Applications/lara.app/LICENSE_XPF.md
+build	UNKNOWN STEP	2026-05-14T16:57:26.9488400Z ▸ Copying /Users/runner/Library/Developer/Xcode/DerivedData/lara-btlmbegntbniggfueaocexfeppba/Build/Intermediates.noindex/ArchiveIntermediates/lara/InstallationBuildProductsLocation/Applications/lara.app/LICENSE_RootHideManagerApp.md
+build	UNKNOWN STEP	2026-05-14T16:57:26.9489890Z ▸ Copying /Users/runner/Library/Developer/Xcode/DerivedData/lara-btlmbegntbniggfueaocexfeppba/Build/Intermediates.noindex/ArchiveIntermediates/lara/InstallationBuildProductsLocation/Applications/lara.app/LICENSE_ChOma.md
+build	UNKNOWN STEP	2026-05-14T16:57:27.1839290Z ▸ Touching lara.app (in target 'lara' from project 'lara')
+build	UNKNOWN STEP	2026-05-14T16:57:27.2569540Z ▸ Archive Succeeded
+build	UNKNOWN STEP	2026-05-14T16:57:27.8088800Z 
+build	UNKNOWN STEP	2026-05-14T16:57:27.8090350Z build successful!
+build	UNKNOWN STEP	2026-05-14T16:57:27.8090880Z ipa at: build/lara.ipa
+build	UNKNOWN STEP	2026-05-14T16:57:27.8322350Z ##[group]Run actions/upload-artifact@v4
+build	UNKNOWN STEP	2026-05-14T16:57:27.8322680Z with:
+build	UNKNOWN STEP	2026-05-14T16:57:27.8322870Z   name: release-ipa
+build	UNKNOWN STEP	2026-05-14T16:57:27.8323070Z   path: build/lara.ipa
+build	UNKNOWN STEP	2026-05-14T16:57:27.8323230Z   if-no-files-found: warn
+build	UNKNOWN STEP	2026-05-14T16:57:27.8323410Z   compression-level: 6
+build	UNKNOWN STEP	2026-05-14T16:57:27.8323570Z   overwrite: false
+build	UNKNOWN STEP	2026-05-14T16:57:27.8323700Z   include-hidden-files: false
+build	UNKNOWN STEP	2026-05-14T16:57:27.8323860Z env:
+build	UNKNOWN STEP	2026-05-14T16:57:27.8324050Z   MD_APPLE_SDK_ROOT: /Applications/Xcode_26.4.1.app
+build	UNKNOWN STEP	2026-05-14T16:57:27.8324310Z ##[endgroup]
+build	UNKNOWN STEP	2026-05-14T16:57:28.2242530Z With the provided path, there will be 1 file uploaded
+build	UNKNOWN STEP	2026-05-14T16:57:28.2244580Z Artifact name is valid!
+build	UNKNOWN STEP	2026-05-14T16:57:28.2245490Z Root directory input is valid!
+build	UNKNOWN STEP	2026-05-14T16:57:28.5143960Z Beginning upload of artifact content to blob storage
+build	UNKNOWN STEP	2026-05-14T16:57:29.1784200Z Uploaded bytes 5575596
+build	UNKNOWN STEP	2026-05-14T16:57:29.2179270Z Finished uploading artifact content to blob storage!
+build	UNKNOWN STEP	2026-05-14T16:57:29.2180700Z SHA256 digest of uploaded artifact zip is 56aec98e7c82bcc74c89312b9ce60618c0fa3874537c62db5088986a6fa886fe
+build	UNKNOWN STEP	2026-05-14T16:57:29.2181580Z Finalizing artifact upload
+build	UNKNOWN STEP	2026-05-14T16:57:29.4087000Z Artifact release-ipa.zip successfully finalized. Artifact ID 6999870334
+build	UNKNOWN STEP	2026-05-14T16:57:29.4087570Z Artifact release-ipa has been successfully uploaded! Final size is 5575596 bytes. Artifact ID is 6999870334
+build	UNKNOWN STEP	2026-05-14T16:57:29.4088250Z Artifact download URL: https://github.com/lackO9373/lara/actions/runs/25873334881/artifacts/6999870334
+build	UNKNOWN STEP	2026-05-14T16:57:29.4205260Z Post job cleanup.
+build	UNKNOWN STEP	2026-05-14T16:57:29.5050960Z [command]/opt/homebrew/bin/git version
+build	UNKNOWN STEP	2026-05-14T16:57:29.5217860Z git version 2.54.0
+build	UNKNOWN STEP	2026-05-14T16:57:29.5238730Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/c35a6d39-5aa9-4d2a-ab50-db82f9cc23ac/.gitconfig'
+build	UNKNOWN STEP	2026-05-14T16:57:29.5245300Z Temporarily overriding HOME='/Users/runner/work/_temp/c35a6d39-5aa9-4d2a-ab50-db82f9cc23ac' before making global git config changes
+build	UNKNOWN STEP	2026-05-14T16:57:29.5245900Z Adding repository directory to the temporary git global config as a safe directory
+build	UNKNOWN STEP	2026-05-14T16:57:29.5252400Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/lara/lara
+build	UNKNOWN STEP	2026-05-14T16:57:29.5345940Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	UNKNOWN STEP	2026-05-14T16:57:29.5400030Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	UNKNOWN STEP	2026-05-14T16:57:29.6110210Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	UNKNOWN STEP	2026-05-14T16:57:29.6156210Z http.https://github.com/.extraheader
+build	UNKNOWN STEP	2026-05-14T16:57:29.6167920Z [command]/opt/homebrew/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	UNKNOWN STEP	2026-05-14T16:57:29.6241800Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	UNKNOWN STEP	2026-05-14T16:57:29.6870130Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	UNKNOWN STEP	2026-05-14T16:57:29.6926910Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	UNKNOWN STEP	2026-05-14T16:57:29.7695240Z Cleaning up orphan processes
+build	UNKNOWN STEP	2026-05-14T16:57:29.8795810Z Terminate orphan process: pid (8460) (ibtoold)
+build	UNKNOWN STEP	2026-05-14T16:57:29.9095730Z Terminate orphan process: pid (8185) (ibtoold)
+build	UNKNOWN STEP	2026-05-14T16:57:30.5708530Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/checkout@v4, actions/upload-artifact@v4. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
