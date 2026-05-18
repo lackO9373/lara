@@ -53,6 +53,16 @@ final class laramgr: ObservableObject {
     @Published var showrespring: Bool = false
     
     @Published var showLogs: Bool = false
+    @Published var axonliteEnabled: Bool = false {
+        didSet {
+            if axonliteEnabled {
+                startAxonLiteTimer()
+            } else {
+                stopAxonLiteTimer()
+            }
+        }
+    }
+    private var axonliteTimer: Timer?
     
     var sbProc: RemoteCall?
     var ytProc = RemoteCall(process: "youtube", useMigFilterBypass: false)
@@ -164,6 +174,22 @@ final class laramgr: ObservableObject {
     
     func respring() {
         showrespring = true
+    }
+    
+    private func startAxonLiteTimer() {
+        axonliteTimer?.invalidate()
+        axonliteTimer = Timer.scheduledTimer(withTimeInterval: 2.0, repeats: true) { [weak self] _ in
+            guard let self = self, let proc = self.sbProc, self.axonliteEnabled else { return }
+            axonlite_tick(proc)
+        }
+    }
+    
+    private func stopAxonLiteTimer() {
+        axonliteTimer?.invalidate()
+        axonliteTimer = nil
+        if let proc = sbProc {
+            axonlite_stop(proc)
+        }
     }
     
     func vfsinit(completion: ((Bool) -> Void)? = nil) {

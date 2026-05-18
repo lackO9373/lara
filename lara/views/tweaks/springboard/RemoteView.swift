@@ -165,10 +165,21 @@ struct RemoteView: View {
                         return "double_tap_to_lock() -> \(result)"
                     }
                 } label: {
-                    Text("Enable Double-Tap to Lock")
+                    Text("Enable Double-Tap to Lock (Home Screen)")
                 }
+
+                Button {
+                    run("Double-Tap Status Bar to Lock") {
+                        let result = double_tap_status_bar_to_lock(mgr.sbProc)
+                        return "double_tap_status_bar_to_lock() -> \(result)"
+                    }
+                } label: {
+                    Text("Enable Double-Tap Status Bar to Lock")
+                }
+
+                Toggle("Enable Axon Lite", isOn: $mgr.axonliteEnabled)
             } footer: {
-                Text("To use UIKit Debug Overlay, double tap the status bar. Double tap the home screen to lock.")
+                Text("To use UIKit Debug Overlay, double tap the status bar. Double tap the home screen or status bar to lock.")
             }
             
             Section {

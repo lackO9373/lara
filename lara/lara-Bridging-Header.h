@@ -15,6 +15,8 @@
 #import "IconServices.h"
 #import "rc.h"
 #import "RemoteCall.h"
+#import "axonlite.h"
+#import "remote_objc.h"
 
 long FindCacheDataOffset(const char *mgKey);
 void LaraClearIconCache(void);
