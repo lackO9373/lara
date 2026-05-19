@@ -26,6 +26,7 @@ struct RemoteView: View {
     @State private var freakyrunning: Bool = false
     @State private var freakyseq: Int = 0
     @AppStorage("notepadEnabled") private var notepadEnabledPersisted: Bool = false
+    @AppStorage("lockTapCount") private var lockTapCount: Int = 2
 
     private var dockMaxColumns: Int { rcdockunlimited ? 50 : 10 }
 
@@ -160,22 +161,32 @@ struct RemoteView: View {
                     Text("Enable UIKit Debug Overlay")
                 }
 
-                Button {
-                    run("Double-Tap to Lock") {
-                        let result = double_tap_to_lock(mgr.sbProc)
-                        return "double_tap_to_lock() -> \(result)"
+                Stepper(value: $lockTapCount, in: 1...5) {
+                    HStack {
+                        Text("Lock Tap Count")
+                        Spacer()
+                        Text("\(lockTapCount)")
+                            .foregroundColor(.secondary)
+                            .monospacedDigit()
                     }
-                } label: {
-                    Text("Enable Double-Tap to Lock (Home Screen)")
                 }
 
                 Button {
-                    run("Double-Tap Status Bar to Lock") {
-                        let result = double_tap_status_bar_to_lock(mgr.sbProc)
-                        return "double_tap_status_bar_to_lock() -> \(result)"
+                    run("\(lockTapCount)-Tap to Lock") {
+                        let result = double_tap_to_lock(mgr.sbProc, Int32(lockTapCount))
+                        return "double_tap_to_lock(\(lockTapCount)) -> \(result)"
                     }
                 } label: {
-                    Text("Enable Double-Tap Status Bar to Lock")
+                    Text("Enable \(lockTapCount)-Tap to Lock (Home Screen)")
+                }
+
+                Button {
+                    run("\(lockTapCount)-Tap Status Bar to Lock") {
+                        let result = double_tap_status_bar_to_lock(mgr.sbProc, Int32(lockTapCount))
+                        return "double_tap_status_bar_to_lock(\(lockTapCount)) -> \(result)"
+                    }
+                } label: {
+                    Text("Enable \(lockTapCount)-Tap Status Bar to Lock")
                 }
 
                 Toggle("Enable Axon Lite", isOn: $mgr.axonliteEnabled)
@@ -188,7 +199,7 @@ struct RemoteView: View {
                         mgr.notepadEnabled = notepadEnabledPersisted
                     }
             } footer: {
-                Text("To use UIKit Debug Overlay, double tap the status bar. Double tap the home screen or status bar to lock.")
+                Text("To use UIKit Debug Overlay, double tap the status bar. Tap the home screen or status bar \(lockTapCount) times to lock.")
             }
             
             Section {
